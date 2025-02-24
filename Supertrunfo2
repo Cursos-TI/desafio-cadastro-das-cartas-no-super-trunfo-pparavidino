@@ -1,0 +1,118 @@
+#include <stdio.h>
+
+int main() {
+    // Declaração de variáveis
+    char pais1[50]= "Brasil", pais2[50]= "Argentina";
+    unsigned long int populacao1 = 214000000, populacao2 = 45000000;
+    float area1 = 8515767.0, area2 = 2780400.0;
+    double PIB1 = 1847000000000.0, PIB2 = 564000000000.0;
+    int pontosTuristicos1 = 30, pontosTuristicos2 = 25; 
+    float densidade1 = populacao1 / area1;
+    float densidade2 = populacao2 / area2;
+
+    int opcao;
+
+    printf("===SUPER TRUNFO===\n");
+    printf("1.População\n");
+    printf("2.Area\n");
+    printf("3.PIB:\n");
+    printf("4.Pontos Turisticos:\n");
+    printf("5.Densidade demografica:\n");
+    printf("Escolha dois tributo para começar:\n");
+    scanf("%d", &opcao);
+
+    printf("Comparação entre %s e %s\n", pais1, pais2);
+
+    switch (opcao)
+    {
+    case 1:
+        printf("Tributo escolhido:População\n");
+        printf("%s: %lu habitantes\n", pais1, populacao1);
+         printf("%s: %lu habitantes\n", pais2, populacao2);
+        if (populacao1 > populacao2)
+        {
+            printf("Brasil ganhou\n");
+        } else if (populacao2 > populacao1)
+        {
+            printf("Argentina ganhou\n");
+        }else 
+        {
+            printf("empate");
+        }
+        
+        break;
+    case 2:
+        printf("Tributo escolhido: Area\n");
+        printf("%s: %.2f km²\n", pais1, area1);
+        printf("%s: %.2f km²\n", pais2, area2);
+        if (area1 > area2)
+        {
+            printf("Brasil ganhou\n");
+        } else if (area2 > area1)
+        {
+            printf("Argentina ganhou\n");
+        } else
+        {
+            printf("empate da comparação\n");
+        }
+        break;
+    case 3:
+        printf("Tributo escolhido: PIB\n");
+        printf("%s: %.2lf dólares\n", pais1, PIB1);
+        printf("%s: %.2lf dólares\n", pais2, PIB2);
+        if (PIB1 > PIB2)
+        {
+            printf("Brasil ganhou\n");
+        } else if (PIB2 > PIB1)
+        {
+            printf("Argentina ganhou\n");
+
+        }else
+        {
+            printf("Empate da comparação\n");
+        }
+        break;
+    case 4:
+        printf("Tributo escolhido : Pontos turisticos\n");
+        printf("%s: %d pontos turisticos\n", pais1, pontosTuristicos1);
+        printf("%s: %d pontos turisticos\n", pais2, pontosTuristicos2);
+        if (pontosTuristicos1 > pontosTuristicos2)
+        {
+            printf("Brasil ganhou\n");
+
+        } else if (pontosTuristicos2>pontosTuristicos1)
+        {
+            printf("Argentina ganhou");
+        } else
+        {
+            printf("Empate da comparação\n");
+        }
+        break;
+
+        case 5: 
+        printf("Tributo escolhido : densidade demografica\n");
+        printf("%s: %f densidade demografica\n", pais1, densidade1);
+        printf("%s: %f densidade demografica\n",pais2 , densidade2);
+
+        if (densidade1> densidade2)
+        {
+            printf("Brasil ganhou\n");
+
+        } else if (densidade2> densidade1)
+        {
+            printf("Argentina ganhou\n");
+
+        } else
+        {
+            printf("Empate da comparação\n");
+
+        }
+        break;
+    default:
+    printf("OPCAO INVALIDA\n");
+        break;
+    }
+
+ 
+    return 0;
+}
